@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .city {
+        background-color: tomato;
+        color: white;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid blue;
+        margin-right: 60vw;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="myFunction()">Hide Elements</button>
+    <div class="city">
+      <h2>London</h2>
+      <p>London is the capital of England.</p>
+    </div>
+    <div class="city">
+      <h2>Paris</h2>
+      <p>Paris is capital of France.</p>
+    </div>
+    <div class="city">
+      <h2>Tokyo</h2>
+      <p>&copy; Tokyo is the capital of Japan.</p>
+    </div>
+
+    <script>
+      function myFunction() {
+        let x = document.getElementsByClassName('city');
+        console.log(x);
+        Array.from(x).forEach((a) => {
+          console.log(a);
+        });
+        const cities = document.querySelectorAll('.city');
+        cities.forEach((city) => {
+          console.log(city);
+          city.style.display = 'none';
+        });
+      }
+    </script>
+  </body>
+</html>
